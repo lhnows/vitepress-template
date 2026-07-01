@@ -2,13 +2,16 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'CAM 产品规格书中心',
-  description: '摄像头产品规格书资料库',
+  title: '晟泰克机器人事业部',
+  description: '机器人全域感知与域控开发平台',
   srcDir: 'pages',
   outDir: 'dist',
   ignoreDeadLinks: true,
   cleanUrls: true,
   lang: 'zh-CN',
+  head: [
+    ['link', { rel: 'icon', href: '/robotics/favicon.svg', type: 'image/svg+xml' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     outline: {

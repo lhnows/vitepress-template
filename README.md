@@ -1,6 +1,6 @@
-# CAM Product Specification Center
+# STK Robotics Website
 
-A VitePress documentation center for CAM product specifications, with sidebar navigation, local search, converted spec pages, and original Word downloads.
+A VitePress site for the STK Robotics business homepage and CAM product specification library. The homepage presents the company offering, while `/cam/` provides sidebar navigation, local search, converted spec pages, and original Word downloads.
 
 ## Deploy
 Deploy with EdgeOne Pages.
@@ -10,6 +10,7 @@ Deploy with EdgeOne Pages.
 ## Features
 
 - Product spec navigation grouped by resolution
+- Company homepage
 - Local full-text search
 - Converted Word specification pages
 - Original `.docx` downloads
@@ -22,11 +23,13 @@ Deploy with EdgeOne Pages.
 ├── .vitepress/          # VitePress configuration
 │   ├── config.mts       # Site configuration
 │   └── theme/           # Custom theme files
-│       └── style.css    # Custom styles
+│       ├── components/  # Home page Vue components
+│       ├── style.css    # Docs styles
+│       └── robotics-home.css # Company homepage styles
 ├── pages/              # Documentation pages
-│   ├── index.md        # Home page
+│   ├── index.md        # Company homepage
 │   ├── cam/            # Generated CAM spec pages
-│   └── public/         # Source Word files and extracted images
+│   └── public/         # Images, source Word files, and static assets
 ├── scripts/            # Generation scripts
 ├── dist/               # Build output directory
 ├── package.json        # Project dependencies
@@ -74,3 +77,13 @@ Place Word specs in the sibling `CAM产品规格书资料库` directory, then ru
 ```bash
 python3 scripts/generate_cam_docs.py
 ```
+
+## Lead Form
+
+The homepage lead form does not submit to an external service by default. Configure a deployment environment variable to enable a webhook:
+
+```bash
+VITE_STK_WEBHOOK_URL=https://example.com/webhook
+```
+
+Do not commit real webhook URLs to the repository.
