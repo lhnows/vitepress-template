@@ -1,6 +1,6 @@
-# VitePress 文档模板
+# CAM 产品规格书中心
 
-一个简洁可定制的 VitePress 文档模板，具有良好的组织结构和现代化设计。
+基于 VitePress 的摄像头产品规格书资料库。站点提供左侧产品导航、全文搜索、规格书内容浏览和原始 Word 文件下载。
 
 ## 部署
 部署到 EdgeOne Pages。
@@ -9,12 +9,12 @@
 
 ## 特性
 
-- 📚 结构良好的文档组织
-- 🎨 自定义主题和样式
-- 📱 响应式设计
-- 🔍 全文搜索
-- 📦 易于部署
-- 🚀 快速轻量
+- 结构化文档中心导航
+- 按像素规格分组的摄像头产品列表
+- 本地全文搜索
+- Word 规格书内容转 Markdown 展示
+- 原始 `.docx` 文件下载
+- EdgeOne Pages 自动部署
 
 ## 目录结构
 
@@ -26,10 +26,9 @@
 │       └── style.css    # 自定义样式
 ├── pages/              # 文档页面
 │   ├── index.md        # 首页
-│   ├── quick-start/    # 快速开始指南
-│   ├── advanced/       # 进阶主题
-│   ├── deployment/     # 部署指南
-│   └── examples/       # 示例
+│   ├── cam/            # 自动生成的摄像头规格书页面
+│   └── public/         # 原始 Word 附件和规格书图片
+├── scripts/            # 文档生成脚本
 ├── dist/               # 构建输出目录
 ├── package.json        # 项目依赖
 ├── edgeone.json        # 项目部署参数
@@ -69,13 +68,12 @@ npm run build
 npm run preview
 ```
 
-## 文档结构
+## 更新产品资料
 
-- **快速开始**: 基础设置和配置指南
-- **进阶**: 深入主题和自定义设置
-- **示例**: Markdown 和 API 使用示例
-- **部署**: 各种平台的部署指南
+将新的 Word 规格书放入仓库上级目录的 `CAM产品规格书资料库` 后，在仓库根目录运行：
 
-## 贡献
+```bash
+python3 scripts/generate_cam_docs.py
+```
 
-欢迎贡献！请随时提交 Pull Request。
+脚本会自动跳过 Word 临时文件，重新生成 `pages/cam/` 页面、`pages/public/source-docx/` 下载附件和 `pages/public/spec-images/` 图片资源，并更新 VitePress 侧边栏。

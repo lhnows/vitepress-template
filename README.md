@@ -1,6 +1,6 @@
-# VitePress Documentation Template
+# CAM Product Specification Center
 
-A clean and customizable VitePress documentation template with a well-organized structure and modern design.
+A VitePress documentation center for CAM product specifications, with sidebar navigation, local search, converted spec pages, and original Word downloads.
 
 ## Deploy
 Deploy with EdgeOne Pages.
@@ -9,12 +9,11 @@ Deploy with EdgeOne Pages.
 
 ## Features
 
-- 📚 Well-organized documentation structure
-- 🎨 Customized theme and styling
-- 📱 Responsive design
-- 🔍 Full-text search
-- 📦 Easy to deploy
-- 🚀 Fast and lightweight
+- Product spec navigation grouped by resolution
+- Local full-text search
+- Converted Word specification pages
+- Original `.docx` downloads
+- EdgeOne Pages deployment
 
 ## Directory Structure
 
@@ -26,10 +25,9 @@ Deploy with EdgeOne Pages.
 │       └── style.css    # Custom styles
 ├── pages/              # Documentation pages
 │   ├── index.md        # Home page
-│   ├── quick-start/    # Quick start guide
-│   ├── advanced/       # Advanced topics
-│   ├── deployment/     # Deployment guides
-│   └── examples/       # Examples
+│   ├── cam/            # Generated CAM spec pages
+│   └── public/         # Source Word files and extracted images
+├── scripts/            # Generation scripts
 ├── dist/               # Build output directory
 ├── package.json        # Project dependencies
 ├── edgeone.json        # Project deployment parameters
@@ -69,13 +67,10 @@ npm run build
 npm run preview
 ```
 
-## Documentation Structure
+## Updating Specs
 
-- **Quick Start**: Basic setup and configuration guide
-- **Advanced**: In-depth topics and customization
-- **Examples**: Markdown and API usage examples
-- **Deployment**: Deployment guides for various platforms
+Place Word specs in the sibling `CAM产品规格书资料库` directory, then run:
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+```bash
+python3 scripts/generate_cam_docs.py
+```
