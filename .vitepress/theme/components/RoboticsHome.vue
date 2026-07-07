@@ -2,7 +2,7 @@
   <div class="robotics-home" id="top">
     <header class="site-header" :class="{ 'is-scrolled': isScrolled, 'is-open': isMenuOpen }">
       <a class="brand" href="#top" aria-label="晟泰克机器人事业部首页" @click="closeMenu">
-        <img class="brand-logo" src="/robotics/softec-logo.jpg" alt="Softec 晟泰克" />
+        <img class="brand-logo" src="/robotics/softec-logo.svg" alt="Softec 晟泰克" />
         <span class="brand-unit">机器人事业部</span>
       </a>
       <nav class="nav" aria-label="主导航">
