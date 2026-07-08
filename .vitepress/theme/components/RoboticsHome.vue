@@ -230,7 +230,7 @@
 
       <section class="quality band" id="quality">
         <div class="quality-media">
-          <img src="/robotics/company-intro-04.png" alt="晟泰克公司介绍" />
+          <img src="/robotics/company-campus.jpg" alt="晟泰克厂区入口" />
         </div>
         <div class="quality-copy">
           <p class="eyebrow">Automotive-Grade</p>
