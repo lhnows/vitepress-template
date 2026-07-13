@@ -22,7 +22,7 @@
 
     <main>
       <section class="hero" aria-label="机器人事业部介绍">
-        <img class="hero-media" src="/robotics/factory-line-27.png" alt="晟泰克数字化生产车间" />
+        <img class="hero-media" src="/robotics/home-hero-robots.png" alt="机器人多场景智能装备背景" />
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="eyebrow">车规感知能力进入机器人现场</p>
