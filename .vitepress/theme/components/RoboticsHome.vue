@@ -126,7 +126,7 @@
         </div>
         <div class="product-grid">
           <article class="product-card">
-            <img src="/robotics/camera-product-21.png" alt="晟泰克车规摄像头产品" />
+            <img class="product-object" src="/robotics/products/gmsl-camera-render.jpg" alt="晟泰克车规摄像头产品" />
             <div>
               <p class="tag">GMSL Camera</p>
               <h3>车规相机与多目 GMSL 接入</h3>
@@ -139,7 +139,7 @@
             </div>
           </article>
           <article class="product-card">
-            <img src="/robotics/ultrasonic/uss-product-20.png" alt="晟泰克超声波雷达产品" />
+            <img class="product-object" src="/robotics/products/ultrasonic-kit.jpg" alt="晟泰克超声波雷达产品" />
             <div>
               <p class="tag">Ultrasonic Radar</p>
               <h3>超声波近场安全雷达</h3>
